@@ -1,8 +1,11 @@
 const express = require("express");
+const cors = require("cors");
 require("dotenv").config();
 const app = express();
 const port = 3000;
 const summarizeText = require("./summarize.js");
+
+app.use(cors())
 
 // Parses JSON bodies (as sent by API clients)
 app.use(express.json());
